@@ -1,0 +1,247 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #4b4f51;
+  --second-text-color: #035755;
+  --h3-color: #fa5652;
+  --accent-color: #ff383d;
+  --second-accent-color: #fb4c47;
+  --second-bg-color: #fafafa;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@font-face {
+  font-family: Gelion500;
+  src: url("../fonts/Gelion-Regular.ttf");
+  font-family: Gelion600;
+  src: url("../fonts/Gelion-Medium.ttf");
+  font-family: Gelion700;
+  src: url("../fonts/Gelion-Bold.ttf");
+  font-family: Gelion900;
+  src: url("../fonts/Gelion-Black.ttf");
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Gelion500, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1470px;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.link {
+  display: block;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0;
+  margin-bottom: 55px;
+  padding-top: 30px;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.31;
+  text-transform: uppercase;
+
+  color: var(--second-text-color);
+}
+.logo-img {
+  margin-right: 14px;
+}
+.site-nav {
+  margin-left: auto;
+  margin-right: 40px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-list > .item:not(:last-child) {
+  margin-right: 45px;
+}
+.nav-list_link {
+  position: relative;
+  font-family: Gelion500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  text-decoration: none;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: var(--second-text-color);
+}
+.nav-list_link.current {
+  color: var(--accent-color);
+}
+.nav-list_link::after {
+  position: absolute;
+  content: "";
+  top: 80%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  transform: scaleX(0);
+  opacity: 0;
+
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+
+  background-color: var(--accent-color);
+}
+.nav-list_link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.button {
+  border: 2px solid var(--second-accent-color);
+  box-sizing: border-box;
+  border-radius: 46px;
+
+  padding: 16px 45px;
+
+  font-family: Gelion500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  text-decoration: none;
+  cursor: pointer;
+
+  color: var(--accent-color);
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+}
+.button:focus,
+.button:hover {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+}
+.button.primary {
+  font-family: Gelion700;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: capitalize;
+
+  min-width: 250px;
+  min-height: 78px;
+
+  background-color: var(--second-accent-color);
+  color: var(--bg-color);
+
+  box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+  border-radius: 65px;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+}
+.button.primary:focus,
+.button.primary:hover {
+  color: var(--accent-color);
+  background-color: var(--bg-color);
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 28px;
+
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.39;
+
+  text-transform: capitalize;
+
+  color: var(--second-text-color);
+}
+.title {
+  margin-top: 0;
+  margin-bottom: 28px;
+
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.22;
+
+  color: var(--h3-color);
+}
+.text {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-family: Gelion500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.9;
+
+  text-transform: capitalize;
+
+  color: var(--text-color);
+}
+.hero-box {
+  width: 640px;
+}
+.section {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section.hero {
+  padding-top: 220px;
+  min-height: 800px;
+}
+.hero-page {
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
