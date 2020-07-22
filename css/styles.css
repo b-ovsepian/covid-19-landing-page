@@ -451,3 +451,123 @@ h1 {
 .section.corona2 .section-box {
   width: 720px;
 }
+.section.corona3 .text {
+  font-size: 18px;
+  line-height: 2.15;
+}
+.do-box {
+  position: relative;
+  width: 650px;
+  padding-left: 100px;
+  margin-right: 150px;
+}
+.do-list > .item {
+  display: flex;
+  align-items: center;
+}
+.do-list > .item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.do-list > .item:nth-child(2n) .do-box {
+  margin-right: 0;
+  margin-left: 150px;
+}
+.do-list > .item:nth-child(1) .do-box::before {
+  content: "01";
+}
+.do-list > .item:nth-child(2) .do-box::before {
+  content: "02";
+}
+.do-list > .item:nth-child(3) .do-box::before {
+  content: "03";
+}
+.do-list > .item:nth-child(4) .do-box::before {
+  content: "04";
+}
+.do-box::before {
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: 75px;
+  top: -7px;
+  left: 0;
+
+  border-radius: 50%;
+  background-color: #fa565226;
+  color: var(--h3-color);
+
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.45;
+
+  text-transform: capitalize;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section.subscribe {
+  text-align: center;
+  padding-top: 0;
+}
+.section.subscribe .section-title {
+  margin-bottom: 62px;
+
+  font-family: Gelion500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.2;
+}
+.input-email {
+  width: 790px;
+  height: 115px;
+  padding: 40px;
+
+  background: #ffffff;
+  box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+  border-radius: 57px;
+  border: none;
+
+  font-family: Gelion500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.18;
+
+  color: #758681;
+}
+.form-field {
+  position: relative;
+}
+.form-button {
+  position: absolute;
+  content: "";
+  width: 210px;
+  height: 78px;
+  top: 50%;
+  right: 18px;
+
+  transform: translateY(-50%);
+}
+.page-footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 65px;
+  margin-top: 0;
+}
+.copyright {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+  font-family: Gelion500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.21;
+
+  color: var(--second-text-color);
+}
