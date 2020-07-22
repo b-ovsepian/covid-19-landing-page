@@ -507,6 +507,14 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+}
+.do-list > .item:hover .do-box::before,
+.do-list > .item:focus .do-box::before {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
 }
 .section.subscribe {
   text-align: center;
@@ -555,6 +563,7 @@ h1 {
 .page-footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 65px;
   margin-top: 0;
 }
@@ -570,4 +579,15 @@ h1 {
   line-height: 1.21;
 
   color: var(--second-text-color);
+}
+.social {
+  display: flex;
+  align-items: center;
+}
+.social > .item:not(:last-child) {
+  margin-right: 35px;
+}
+.page-footer .site-nav {
+  margin-left: 0;
+  margin-right: 0;
 }
